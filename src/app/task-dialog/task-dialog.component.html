@@ -15,15 +15,19 @@
             matInput
             placeholder="Add a Task"
             autocomplete="off"
-            (keyup.enter)="addDailogTask()"
-            [formControl]="nameControl"
-
+            [(ngModel)]="task"
         /></mat-form-field>
       </div>
 </div>
 
 <div mat-dialog-actions class="dailogAction">
-    <button mat-raised-button color="primary" (click)="addDailogTask()">Create</button>
+    <ng-container *ngIf="task; else disabledButton">
+     <button mat-raised-button color="primary" [mat-dialog-close]="task">Create</button>
+    </ng-container>
+
+    <ng-template #disabledButton>
+      <button mat-raised-button disabled color="primary" style="color: gray; background-color: #ccc">Create</button>
+    </ng-template>
 
 </div>
 

@@ -28,14 +28,9 @@ export class AddTaskBtnComponent implements OnInit {
       height: '500px',
     });
 
-    dialogRef.afterClosed().subscribe((result) => {
-      if (result) {
-        console.log(result);
-        const daily: DailyTask = {
-          type: 'daily',
-          task: 'test',
-        };
-        this.dailyService.setDailies([daily]);
+    dialogRef.afterClosed().subscribe((task) => {
+      if (task) {
+        this.dailyService.createTask(task);
       }
       console.log('The dialog was closed');
     });

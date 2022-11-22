@@ -2,7 +2,7 @@ import { Component, Inject, Input, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { DailyService } from '../daily/daily.service';
-import { DailyTask } from '../daily/models';
+import { DailyTask } from "../daily/models";
 
 type TaskType = DailyTask;
 
@@ -16,6 +16,7 @@ export class TaskDialogComponent implements OnInit {
   @Input() public onAddDialogItem: Function | null = null;
 
   constructor(
+    @Inject(MAT_DIALOG_DATA) public task: String,
     public dialogRef: MatDialogRef<TaskDialogComponent>,
     private _dailyService: DailyService
   ) {}
@@ -32,6 +33,5 @@ export class TaskDialogComponent implements OnInit {
 
     this.nameControl.reset();
     console.log(value$);
-    this.dialogRef.close();
   }
 }

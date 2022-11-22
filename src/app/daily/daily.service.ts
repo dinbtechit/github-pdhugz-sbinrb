@@ -5,7 +5,7 @@ import { DailyTask } from './models';
 @Injectable({ providedIn: 'root' })
 export class DailyService {
 
-  private _dailies$ = new BehaviorSubject<DailyTask[]>([]); 
+  private _dailies$ = new BehaviorSubject<DailyTask[]>([]);
 
   public getDailies(): DailyTask[] {
     return this._dailies$.getValue();

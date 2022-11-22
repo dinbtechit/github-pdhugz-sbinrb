@@ -50,10 +50,6 @@ export class ItemListComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.initialData$) {
-      this.initialData$.subscribe((data) => {
-        console.log(`'onInit - ${data}'`);
-      });
-
       this.filteredData$ = combineLatest([
         this._homeService.searchData$,
         this.initialData$,
