@@ -1,0 +1,48 @@
+.mat-card {
+  border-radius: 10px;
+  background-color: #edecee;
+  color: black;
+}
+
+mat-form-field {
+  width: 100%;
+}
+.displayvalue {
+  justify-content: left;
+  font-size: 15px;
+}
+
+.addDone:hover {
+  background-color: green;
+  color: white;
+}
+
+.removeDone:hover {
+  background-color: orange;
+  color: white;
+}
+
+
+.titlecontainer {
+  display: flex;
+  align-items:baseline;
+  justify-content: space-between;
+}
+
+.righTitle{
+display: flex;
+align-items: center;
+}
+
+.badgecontainer{
+  width: 5px;
+  height: 15px;
+}
+
+::ng-deep.mat-tab-label, ::ng-deep.mat-tab-label-active{
+  min-width: 0!important;
+  padding: 3px!important;
+  margin: 2px!important;
+  color: #472480 !important;
+ }
+

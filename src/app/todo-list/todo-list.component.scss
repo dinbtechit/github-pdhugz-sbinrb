@@ -1,0 +1,30 @@
+.mat-card {
+  border-radius: 10px;
+  background-color: #edecee;
+  color: black;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  .displayvalue {
+    justify-content: center;
+    font-size: 15px;
+    margin: 10px;
+  }
+   
+  .titlecontainer {
+    display: flex;
+    align-items:baseline;
+    justify-content: space-between;
+  }
+  
+  .righTitle{
+  display: flex;
+  align-items: center;
+  }
+  
+  .badgecontainer{
+    width: 5px;
+    height: 15px;
+  }

@@ -1,0 +1,53 @@
+mat-form-field {
+  width: 100%;
+}
+
+.mat-input-element {
+  color: black;
+}
+.mat-input-element::placeholder {
+  color: grey;
+}
+
+//input outline color
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  background-color: rgb(227, 227, 227);
+  color:lightgrey
+  // opacity: 1!important;
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  background-color: white!important;
+}
+
+.displayvalue {
+  justify-content: left;
+  font-size: 15px;
+  margin: 10px;
+}
+
+.deleteitem {
+  color: red;
+}
+#matMenu {
+  justify-content: left;
+}
+
+.titleBadge {
+  display: flex;
+}
+
+.badgecontainer {
+  width: 10px;
+  height: 10px;
+  margin: 15px;
+}
+
+.number-display {
+  font-size: 1em;
+}
+
+
+.mat-tab{
+  max-width: 50px;
+}

@@ -1,0 +1,29 @@
+<div>
+  <mat-form-field appearance="outline"
+    ><input
+      matInput
+      placeholder="Add a Task"
+      (keyup.enter)="addTask()"
+      autocomplete="off"
+      [formControl]="nameControl"
+  /></mat-form-field>
+</div>
+
+data {{ initialData$ | async }}
+
+<ng-container *ngIf="filteredData$ | async as data">
+  <div
+    cdkDropList
+    class="example-list"
+    (cdkDropListDropped)="drop($event, data)"
+  >
+    <app-item
+      [value]="value"
+      *ngFor="let value of data; index as index"
+      (inputDataChange)="removeTask(data, index)"
+      (checkTask)="addCheckedTask($event, data)"
+      cdkDrag
+    >
+    </app-item>
+  </div>
+</ng-container>

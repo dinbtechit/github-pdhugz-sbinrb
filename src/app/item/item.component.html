@@ -1,0 +1,25 @@
+<div class="listContainer">
+  <div class="checkContainer" [style.backgroundColor]="IsChecked ? 'grey': '#ff6165' ">
+    <div>
+      <mat-checkbox color="secondary" [(ngModel)]="IsChecked" (change)="onChange($event, value.task)"></mat-checkbox>
+    </div>
+  </div>
+
+  <div class="displayTask">
+    <div class="displayvalue" [ngClass]="{ 'line-through': value.task }">
+      {{ value.task | uppercase }}
+    </div>
+  </div>
+
+  <div class="menuDrop">
+    <Matbutton mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </Matbutton>
+    <mat-menu #menu="matMenu" >
+      <button mat-menu-item (click)="removeTask($event)">
+        <mat-icon class="deleteitem">delete</mat-icon>
+        <span>remove</span>
+      </button>
+    </mat-menu>
+  </div>
+</div>

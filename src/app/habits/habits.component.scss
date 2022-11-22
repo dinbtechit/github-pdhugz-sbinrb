@@ -1,0 +1,38 @@
+.mat-card {
+  border-radius: 10px;
+  background-color: #edecee;
+  color: black;
+}
+
+mat-form-field {
+  width: 100%;
+}
+.displayvalue {
+  justify-content: center;
+  font-size: large;
+  margin: 10px;
+}
+
+.addDone:hover {
+  background-color: green;
+}
+
+.removeDone:hover {
+  background-color: red;
+}
+
+.titlecontainer {
+  display: flex;
+  align-items:baseline;
+  justify-content: space-between;
+}
+
+.righTitle{
+display: flex;
+align-items: center;
+}
+
+.badgecontainer{
+  width: 5px;
+  height: 15px;
+}
